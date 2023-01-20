@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: #293232;
+}
+
+main {
+    position: relative;
+}
+
+.sonar__signal {
+    height: 13rem;
+    width: 0.2rem;
+    background-color: #f1f1f1;
+    transform-origin: bottom;
+    border-radius: 4px;
+    animation: rotate 2s linear infinite;
+}
+
+.sonar__signal::before {
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    display: block;
+    transform: translate(-0.4rem, 12.5rem);
+    border-radius: 50%;
+    background-color: red;
+    content: "";
+    opacity: 0.8;
+}
+
+.sonar__signal::after {
+    display: block;
+    height: 13rem;
+    width: 2rem;
+    transform: translateX(-2rem);
+    content: "";
+    animation: changeColor 3s ease infinite;
+    
+}
+
+.point {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.point_1 {
+    position: absolute;
+    transform: translate(20px, -12rem);
+}
+
+.point_2  {
+    position: absolute;
+    transform: translate(20px, 50px);
+}
+
+.point_3  {
+    position: absolute;
+    transform: translate(120px, -50px);
+}
+
+.point_4  {
+    position: absolute;
+    transform: translate(120px, 150px);
+}
+
+.point_5  {
+    position: absolute;
+    transform: translate(-120px, -50px);
+}
+
+.point_6  {
+    position: absolute;
+    transform: translate(-120px, 100px);
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: rgb(241, 113, 113);
+        opacity: 0.3;
+    }
+    50% {
+        background-color: rgb(21, 221, 21);
+        opacity: 0.3;
+    }
+    100% {
+        background-color: rgb(100, 100, 223);
+        opacity: 0.3;
+    }
+}
+
+@keyframes colorPoint {
+    from {
+
+    }
+    to {
+        
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+     to {
+        transform: rotate(360deg);
+     }
+}
